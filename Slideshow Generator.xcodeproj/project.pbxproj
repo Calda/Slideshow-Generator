@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4442B6821AA8CD9300163DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442B6811AA8CD9300163DFF /* AppDelegate.swift */; };
+		4442B6841AA8CD9300163DFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442B6831AA8CD9300163DFF /* ViewController.swift */; };
+		4442B6861AA8CD9300163DFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4442B6851AA8CD9300163DFF /* Images.xcassets */; };
+		4442B6891AA8CD9300163DFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442B6871AA8CD9300163DFF /* Main.storyboard */; };
+		4442B6951AA8CD9300163DFF /* Slideshow_GeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442B6941AA8CD9300163DFF /* Slideshow_GeneratorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4442B68F1AA8CD9300163DFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4442B6741AA8CD9300163DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4442B67B1AA8CD9300163DFF;
+			remoteInfo = "Slideshow Generator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4442B67C1AA8CD9300163DFF /* Slideshow Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slideshow Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4442B6801AA8CD9300163DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4442B6811AA8CD9300163DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4442B6831AA8CD9300163DFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4442B6851AA8CD9300163DFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4442B6881AA8CD9300163DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4442B68E1AA8CD9300163DFF /* Slideshow GeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Slideshow GeneratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4442B6931AA8CD9300163DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4442B6941AA8CD9300163DFF /* Slideshow_GeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slideshow_GeneratorTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4442B6791AA8CD9300163DFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4442B68B1AA8CD9300163DFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4442B6731AA8CD9300163DFF = {
+			isa = PBXGroup;
+			children = (
+				4442B67E1AA8CD9300163DFF /* Slideshow Generator */,
+				4442B6911AA8CD9300163DFF /* Slideshow GeneratorTests */,
+				4442B67D1AA8CD9300163DFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4442B67D1AA8CD9300163DFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4442B67C1AA8CD9300163DFF /* Slideshow Generator.app */,
+				4442B68E1AA8CD9300163DFF /* Slideshow GeneratorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4442B67E1AA8CD9300163DFF /* Slideshow Generator */ = {
+			isa = PBXGroup;
+			children = (
+				4442B6811AA8CD9300163DFF /* AppDelegate.swift */,
+				4442B6831AA8CD9300163DFF /* ViewController.swift */,
+				4442B6851AA8CD9300163DFF /* Images.xcassets */,
+				4442B6871AA8CD9300163DFF /* Main.storyboard */,
+				4442B67F1AA8CD9300163DFF /* Supporting Files */,
+			);
+			path = "Slideshow Generator";
+			sourceTree = "<group>";
+		};
+		4442B67F1AA8CD9300163DFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4442B6801AA8CD9300163DFF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4442B6911AA8CD9300163DFF /* Slideshow GeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4442B6941AA8CD9300163DFF /* Slideshow_GeneratorTests.swift */,
+				4442B6921AA8CD9300163DFF /* Supporting Files */,
+			);
+			path = "Slideshow GeneratorTests";
+			sourceTree = "<group>";
+		};
+		4442B6921AA8CD9300163DFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4442B6931AA8CD9300163DFF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4442B67B1AA8CD9300163DFF /* Slideshow Generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4442B6981AA8CD9300163DFF /* Build configuration list for PBXNativeTarget "Slideshow Generator" */;
+			buildPhases = (
+				4442B6781AA8CD9300163DFF /* Sources */,
+				4442B6791AA8CD9300163DFF /* Frameworks */,
+				4442B67A1AA8CD9300163DFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Slideshow Generator";
+			productName = "Slideshow Generator";
+			productReference = 4442B67C1AA8CD9300163DFF /* Slideshow Generator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4442B68D1AA8CD9300163DFF /* Slideshow GeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4442B69B1AA8CD9300163DFF /* Build configuration list for PBXNativeTarget "Slideshow GeneratorTests" */;
+			buildPhases = (
+				4442B68A1AA8CD9300163DFF /* Sources */,
+				4442B68B1AA8CD9300163DFF /* Frameworks */,
+				4442B68C1AA8CD9300163DFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4442B6901AA8CD9300163DFF /* PBXTargetDependency */,
+			);
+			name = "Slideshow GeneratorTests";
+			productName = "Slideshow GeneratorTests";
+			productReference = 4442B68E1AA8CD9300163DFF /* Slideshow GeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4442B6741AA8CD9300163DFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Cal Stephens";
+				TargetAttributes = {
+					4442B67B1AA8CD9300163DFF = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					4442B68D1AA8CD9300163DFF = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 4442B67B1AA8CD9300163DFF;
+					};
+				};
+			};
+			buildConfigurationList = 4442B6771AA8CD9300163DFF /* Build configuration list for PBXProject "Slideshow Generator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4442B6731AA8CD9300163DFF;
+			productRefGroup = 4442B67D1AA8CD9300163DFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4442B67B1AA8CD9300163DFF /* Slideshow Generator */,
+				4442B68D1AA8CD9300163DFF /* Slideshow GeneratorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4442B67A1AA8CD9300163DFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4442B6861AA8CD9300163DFF /* Images.xcassets in Resources */,
+				4442B6891AA8CD9300163DFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4442B68C1AA8CD9300163DFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4442B6781AA8CD9300163DFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4442B6841AA8CD9300163DFF /* ViewController.swift in Sources */,
+				4442B6821AA8CD9300163DFF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4442B68A1AA8CD9300163DFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4442B6951AA8CD9300163DFF /* Slideshow_GeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4442B6901AA8CD9300163DFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4442B67B1AA8CD9300163DFF /* Slideshow Generator */;
+			targetProxy = 4442B68F1AA8CD9300163DFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4442B6871AA8CD9300163DFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4442B6881AA8CD9300163DFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4442B6961AA8CD9300163DFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4442B6971AA8CD9300163DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4442B6991AA8CD9300163DFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Slideshow Generator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4442B69A1AA8CD9300163DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Slideshow Generator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4442B69C1AA8CD9300163DFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Slideshow GeneratorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slideshow Generator.app/Contents/MacOS/Slideshow Generator";
+			};
+			name = Debug;
+		};
+		4442B69D1AA8CD9300163DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Slideshow GeneratorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slideshow Generator.app/Contents/MacOS/Slideshow Generator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4442B6771AA8CD9300163DFF /* Build configuration list for PBXProject "Slideshow Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4442B6961AA8CD9300163DFF /* Debug */,
+				4442B6971AA8CD9300163DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4442B6981AA8CD9300163DFF /* Build configuration list for PBXNativeTarget "Slideshow Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4442B6991AA8CD9300163DFF /* Debug */,
+				4442B69A1AA8CD9300163DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4442B69B1AA8CD9300163DFF /* Build configuration list for PBXNativeTarget "Slideshow GeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4442B69C1AA8CD9300163DFF /* Debug */,
+				4442B69D1AA8CD9300163DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4442B6741AA8CD9300163DFF /* Project object */;
+}
