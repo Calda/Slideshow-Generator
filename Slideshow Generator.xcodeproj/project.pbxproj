@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4442B6821AA8CD9300163DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442B6811AA8CD9300163DFF /* AppDelegate.swift */; };
-		4442B6841AA8CD9300163DFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442B6831AA8CD9300163DFF /* ViewController.swift */; };
+		4442B6841AA8CD9300163DFF /* SGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442B6831AA8CD9300163DFF /* SGViewController.swift */; };
 		4442B6861AA8CD9300163DFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4442B6851AA8CD9300163DFF /* Images.xcassets */; };
 		4442B6891AA8CD9300163DFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4442B6871AA8CD9300163DFF /* Main.storyboard */; };
 		4442B6951AA8CD9300163DFF /* Slideshow_GeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442B6941AA8CD9300163DFF /* Slideshow_GeneratorTests.swift */; };
+		4442B69F1AA8D37500163DFF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4442B69E1AA8D37500163DFF /* AVFoundation.framework */; };
+		44C92CBB1AA8DBBE00B97FD9 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C92CBA1AA8DBBE00B97FD9 /* AVKit.framework */; };
+		44DE28711AAA345700DB2EEA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DE28701AAA345700DB2EEA /* QuartzCore.framework */; };
+		44DE28731AAA345F00DB2EEA /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DE28721AAA345F00DB2EEA /* Quartz.framework */; };
+		44DE28751AAA356500DB2EEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DE28741AAA356500DB2EEA /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +33,17 @@
 		4442B67C1AA8CD9300163DFF /* Slideshow Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slideshow Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4442B6801AA8CD9300163DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4442B6811AA8CD9300163DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4442B6831AA8CD9300163DFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4442B6831AA8CD9300163DFF /* SGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGViewController.swift; sourceTree = "<group>"; };
 		4442B6851AA8CD9300163DFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4442B6881AA8CD9300163DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4442B68E1AA8CD9300163DFF /* Slideshow GeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Slideshow GeneratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4442B6931AA8CD9300163DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4442B6941AA8CD9300163DFF /* Slideshow_GeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slideshow_GeneratorTests.swift; sourceTree = "<group>"; };
+		4442B69E1AA8D37500163DFF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		44C92CBA1AA8DBBE00B97FD9 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		44DE28701AAA345700DB2EEA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		44DE28721AAA345F00DB2EEA /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		44DE28741AAA356500DB2EEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44DE28751AAA356500DB2EEA /* CoreGraphics.framework in Frameworks */,
+				44DE28731AAA345F00DB2EEA /* Quartz.framework in Frameworks */,
+				44DE28711AAA345700DB2EEA /* QuartzCore.framework in Frameworks */,
+				44C92CBB1AA8DBBE00B97FD9 /* AVKit.framework in Frameworks */,
+				4442B69F1AA8D37500163DFF /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +72,11 @@
 		4442B6731AA8CD9300163DFF = {
 			isa = PBXGroup;
 			children = (
+				44DE28741AAA356500DB2EEA /* CoreGraphics.framework */,
+				44DE28721AAA345F00DB2EEA /* Quartz.framework */,
+				44DE28701AAA345700DB2EEA /* QuartzCore.framework */,
+				44C92CBA1AA8DBBE00B97FD9 /* AVKit.framework */,
+				4442B69E1AA8D37500163DFF /* AVFoundation.framework */,
 				4442B67E1AA8CD9300163DFF /* Slideshow Generator */,
 				4442B6911AA8CD9300163DFF /* Slideshow GeneratorTests */,
 				4442B67D1AA8CD9300163DFF /* Products */,
@@ -76,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4442B6811AA8CD9300163DFF /* AppDelegate.swift */,
-				4442B6831AA8CD9300163DFF /* ViewController.swift */,
+				4442B6831AA8CD9300163DFF /* SGViewController.swift */,
 				4442B6851AA8CD9300163DFF /* Images.xcassets */,
 				4442B6871AA8CD9300163DFF /* Main.storyboard */,
 				4442B67F1AA8CD9300163DFF /* Supporting Files */,
@@ -208,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4442B6841AA8CD9300163DFF /* ViewController.swift in Sources */,
+				4442B6841AA8CD9300163DFF /* SGViewController.swift in Sources */,
 				4442B6821AA8CD9300163DFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,10 +344,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Slideshow Generator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -335,10 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Slideshow Generator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -397,6 +422,7 @@
 				4442B69A1AA8CD9300163DFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4442B69B1AA8CD9300163DFF /* Build configuration list for PBXNativeTarget "Slideshow GeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +431,7 @@
 				4442B69D1AA8CD9300163DFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
