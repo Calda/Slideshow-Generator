@@ -36,6 +36,7 @@ class SGViewController: NSViewController {
         var images : [NSImage] = []
         
         while let file = enumerator?.nextObject() as? String {
+            if !file.lastPathComponent.hasSuffix("png") { continue }
             let image = NSImage(byReferencingURL: fileFromRoot(file)!)
             images.append(image)
         }
@@ -46,26 +47,25 @@ class SGViewController: NSViewController {
         let adaptorSettings = [kCVPixelBufferPixelFormatTypeKey as NSString : NSNumber(unsignedInteger: kCVPixelFormatType_32ARGB), kCVPixelBufferWidthKey : NSNumber(unsignedInt: 1920), kCVPixelBufferHeightKey : NSNumber(unsignedInt: 1080)]
         let adaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: writerInput, sourcePixelBufferAttributes: adaptorSettings)
         
-        println(fileFromRoot("test.mov"))
         let videoWriter = AVAssetWriter(URL: fileFromRoot("test.mov"), fileType: AVFileTypeQuickTimeMovie, error: nil)
         writerInput.expectsMediaDataInRealTime = false
         videoWriter.addInput(writerInput)
         
-        println(videoWriter.status.rawValue)
         videoWriter.startWriting()
-        println(videoWriter.status.rawValue)
         videoWriter.startSessionAtSourceTime(kCMTimeZero)
         
+        var totalTime = kCMTimeZero
+        for image in images {
+            println(CMTimeGetSeconds(totalTime))
+            adaptor.appendPixelBuffer(pixelBufferFromImage(image), withPresentationTime: totalTime)
+            totalTime = CMTimeAdd(totalTime, CMTimeMake(1,1))
+        }
         
-        var buffer = pixelBufferFromImage(images[0])
-        var result = adaptor.appendPixelBuffer(buffer, withPresentationTime: kCMTimeZero)
-        println(result)
+        //var result = adaptor.appendPixelBuffer(pixelBufferFromImage(images[1]), withPresentationTime: kCMTimeZero)
         
-        buffer = pixelBufferFromImage(images[1])
-        result = adaptor.appendPixelBuffer(buffer, withPresentationTime: CMTimeMake(1,1))
-        println(result)
+        //result = adaptor.appendPixelBuffer(pixelBufferFromImage(images[3]), withPresentationTime: CMTimeMake(1,1))
         
-        videoWriter.endSessionAtSourceTime(CMTimeMake(2,1))
+        videoWriter.endSessionAtSourceTime(CMTimeAdd(totalTime, CMTimeMake(1,1)))
         writerInput.markAsFinished()
         videoWriter.finishWritingWithCompletionHandler({})
     }
@@ -85,7 +85,7 @@ class SGViewController: NSViewController {
     
     
     func pixelBufferFromImage(nsImage: NSImage) -> CVPixelBuffer {
-        var imageRect: CGRect = CGRectMake(500, 500, nsImage.size.width, nsImage.size.height)
+        var imageRect: CGRect = CGRectMake(0, 0, 1920, 1080)
         let image = nsImage.CGImageForProposedRect(&imageRect, context: nil, hints: nil)
         
         let options = NSDictionary(objects: [NSNumber(bool: true), NSNumber(bool: true)], forKeys: [kCVPixelBufferCGBitmapContextCompatibilityKey, kCVPixelBufferCGImageCompatibilityKey])
@@ -97,7 +97,7 @@ class SGViewController: NSViewController {
         
         var status = CVPixelBufferCreate(kCFAllocatorDefault, 1920, 1080, OSType(kCVPixelFormatType_32ARGB), options, &pxbuffer)
         
-        let buffer = pxbuffer!.takeUnretainedValue()
+        let buffer = pxbuffer!.takeRetainedValue()
         
         CVPixelBufferLockBaseAddress(buffer, CVOptionFlags(0))
         var pxdata = CVPixelBufferGetBaseAddress(buffer)
@@ -105,7 +105,7 @@ class SGViewController: NSViewController {
         let color = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo : CGBitmapInfo = CGBitmapInfo(CGImageAlphaInfo.NoneSkipFirst.rawValue)
         //kCGImageAlphaNoneSkipFirst?
-        let context = CGBitmapContextCreate(pxdata, 1020, 1920, 8, 4 * 1920, color, bitmapInfo)
+        let context = CGBitmapContextCreate(pxdata, 1920, 1080, 8, 4 * 1920, color, bitmapInfo)
         
         CGContextConcatCTM(context, CGAffineTransformIdentity)
         CGContextDrawImage(context, imageRect, image?.takeUnretainedValue())
