@@ -17,6 +17,9 @@
 		44DE28711AAA345700DB2EEA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DE28701AAA345700DB2EEA /* QuartzCore.framework */; };
 		44DE28731AAA345F00DB2EEA /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DE28721AAA345F00DB2EEA /* Quartz.framework */; };
 		44DE28751AAA356500DB2EEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DE28741AAA356500DB2EEA /* CoreGraphics.framework */; };
+		AC3EFB771AB204DB00526066 /* SGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3EFB761AB204DB00526066 /* SGImage.swift */; };
+		AC3EFB791AB2053000526066 /* SGKeyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3EFB781AB2053000526066 /* SGKeyframe.swift */; };
+		ACD2D9921AB7507C00308C96 /* SGSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2D9911AB7507C00308C96 /* SGSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		44DE28701AAA345700DB2EEA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		44DE28721AAA345F00DB2EEA /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		44DE28741AAA356500DB2EEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AC3EFB761AB204DB00526066 /* SGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGImage.swift; sourceTree = "<group>"; };
+		AC3EFB781AB2053000526066 /* SGKeyframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGKeyframe.swift; sourceTree = "<group>"; };
+		ACD2D9911AB7507C00308C96 /* SGSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				4442B6851AA8CD9300163DFF /* Images.xcassets */,
 				4442B6871AA8CD9300163DFF /* Main.storyboard */,
 				4442B67F1AA8CD9300163DFF /* Supporting Files */,
+				AC3EFB761AB204DB00526066 /* SGImage.swift */,
+				AC3EFB781AB2053000526066 /* SGKeyframe.swift */,
+				ACD2D9911AB7507C00308C96 /* SGSession.swift */,
 			);
 			path = "Slideshow Generator";
 			sourceTree = "<group>";
@@ -229,7 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4442B6841AA8CD9300163DFF /* SGViewController.swift in Sources */,
+				AC3EFB791AB2053000526066 /* SGKeyframe.swift in Sources */,
+				AC3EFB771AB204DB00526066 /* SGImage.swift in Sources */,
 				4442B6821AA8CD9300163DFF /* AppDelegate.swift in Sources */,
+				ACD2D9921AB7507C00308C96 /* SGSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

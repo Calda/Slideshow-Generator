@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Cal Stephens. All rights reserved.
 //
 
-import Cocoa
 import AVFoundation
 import Quartz
 import QuartzCore
@@ -18,7 +17,28 @@ class SGViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let root = fileRoot()
+        let enumerator = fileManager.enumeratorAtPath(root.path!)
+        
+        var images : [SGImage] = []
+        
+        while let file = enumerator?.nextObject() as? String {
+            if !file.lastPathComponent.hasSuffix("png") { continue }
+            let image = NSImage(byReferencingURL: fileFromRoot(file)!)
+            images.append(SGImage(image: image))
+        }
+        
+        let image = images[0]
+        image.addKeyframeAtTime(0.0, SGKeyframe(scale: 0.5))
+        image.addKeyframeAtTime(1.0, SGKeyframe(scale: 1.0))
+        
+        println(image.frameAtTime(0.0))
+        println(image.frameAtTime(0.25))
+        println(image.frameAtTime(0.5))
+        println(image.frameAtTime(0.75))
+        println(image.frameAtTime(1))
+        
         // Do any additional setup after loading the view.
     }
 
