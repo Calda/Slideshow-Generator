@@ -29,6 +29,19 @@ class SGImage {
     
     
     func frameAtTime(time: CGFloat) -> SGKeyframe {
+        if keyframes.keys.array.count == 1 {
+            return keyframes[0.0]!
+        }
+        var finalKeyTime = CGFloat(0.0)
+        for keyTime in keyframes.keys {
+            if keyTime > finalKeyTime {
+                finalKeyTime = keyTime
+            }
+        }
+        if time > finalKeyTime {
+            return keyframes[finalKeyTime]!
+        }
+        
         var keyBefore : (time: CGFloat, delta: CGFloat) = (0, -10000)
         var keyAfter : (time: CGFloat, delta: CGFloat) = (10000, 10000)
         
@@ -36,6 +49,7 @@ class SGImage {
             if keyTime == time {
                 return keyframes[time]!
             }
+            
             let delta = keyTime - time
             var other = keyBefore
             var usesBefore = true

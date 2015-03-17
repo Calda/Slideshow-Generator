@@ -19,8 +19,31 @@ class SGSession {
         self.videoSize = videoSize
     }
     
+    func allImages() -> [SGImage] {
+        var images : [SGImage] = []
+        for (image, _, _) in self.images {
+            images.append(image)
+        }
+        return images
+    }
+    
     func addImage(image: SGImage, atTime time: CGFloat, forDuration duration: CGFloat) {
         images.append(image: image, start: time, duration: duration)
+    }
+    
+    func appendImage(image: SGImage, forDuration duration: CGFloat) {
+        addImage(image, atTime: totalDuration(), forDuration: duration)
+    }
+    
+    func totalDuration() -> CGFloat {
+        var latestEndTime : CGFloat = 0.0
+        for (_, start, duration) in images {
+            let endTime = start + duration
+            if endTime > latestEndTime {
+                latestEndTime = endTime
+            }
+        }
+        return latestEndTime
     }
     
     func writeToDisk(file: NSURL) {
@@ -31,49 +54,26 @@ class SGSession {
         let adaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: writerInput, sourcePixelBufferAttributes: adaptorSettings)
         
         let videoWriter = AVAssetWriter(URL: file, fileType: AVFileTypeQuickTimeMovie, error: nil)
-        writerInput.expectsMediaDataInRealTime = false
+        writerInput.expectsMediaDataInRealTime = true
         videoWriter.addInput(writerInput)
         
         videoWriter.startWriting()
-        videoWriter.startSessionAtSourceTime(kCMTimeZero)
+        videoWriter.startSessionAtSourceTime(CMTimeMake(0,30))
         
         var totalTime = kCMTimeZero
         for (image, start, duration) in images {
             for i in 0..<Int(duration * 30) {
-                //write video here
+                while !writerInput.readyForMoreMediaData { }
+                
+                let buffer = image.bufferAtTime(CGFloat(i) / 30, videoSize: videoSize)
+                adaptor.appendPixelBuffer(buffer, withPresentationTime: totalTime)
+                totalTime = CMTimeAdd(totalTime, CMTimeMake(1,30))
             }
         }
+        totalTime = CMTimeAdd(totalTime, CMTimeMake(1,30))
+        videoWriter.endSessionAtSourceTime(totalTime)
+        writerInput.markAsFinished()
+        videoWriter.finishWritingWithCompletionHandler({})
     }
     
 }
-
-
-/*
-let videoSettings = [AVVideoCodecKey: AVVideoCodecH264, AVVideoWidthKey : NSNumber(int: 1920), AVVideoHeightKey : NSNumber(int: 1080)]
-let writerInput = AVAssetWriterInput(mediaType: AVMediaTypeVideo, outputSettings: videoSettings)
-
-let adaptorSettings = [kCVPixelBufferPixelFormatTypeKey as NSString : NSNumber(unsignedInteger: kCVPixelFormatType_32ARGB), kCVPixelBufferWidthKey : NSNumber(unsignedInt: 1920), kCVPixelBufferHeightKey : NSNumber(unsignedInt: 1080)]
-let adaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: writerInput, sourcePixelBufferAttributes: adaptorSettings)
-
-let videoWriter = AVAssetWriter(URL: fileFromRoot("test.mov"), fileType: AVFileTypeQuickTimeMovie, error: nil)
-writerInput.expectsMediaDataInRealTime = false
-videoWriter.addInput(writerInput)
-
-videoWriter.startWriting()
-videoWriter.startSessionAtSourceTime(kCMTimeZero)
-
-var totalTime = kCMTimeZero
-for image in images {
-println(CMTimeGetSeconds(totalTime))
-adaptor.appendPixelBuffer(pixelBufferFromImage(image), withPresentationTime: totalTime)
-totalTime = CMTimeAdd(totalTime, CMTimeMake(1,1))
-}
-
-//var result = adaptor.appendPixelBuffer(pixelBufferFromImage(images[1]), withPresentationTime: kCMTimeZero)
-
-//result = adaptor.appendPixelBuffer(pixelBufferFromImage(images[3]), withPresentationTime: CMTimeMake(1,1))
-
-videoWriter.endSessionAtSourceTime(CMTimeAdd(totalTime, CMTimeMake(1,1)))
-writerInput.markAsFinished()
-videoWriter.finishWritingWithCompletionHandler({})
-*/
